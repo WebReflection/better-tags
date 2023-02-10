@@ -2,7 +2,6 @@
 
 [![build status](https://github.com/WebReflection/better-tags/actions/workflows/node.js.yml/badge.svg)](https://github.com/WebReflection/better-tags/actions) [![Coverage Status](https://coveralls.io/repos/github/WebReflection/better-tags/badge.svg?branch=main)](https://coveralls.io/github/WebReflection/better-tags?branch=main)
 
-
 A way to handle SQLite with template literal tags that works seamlessly with both [bun](https://bun.sh/) and Nodejs' [better-sqlite3](https://www.npmjs.com/package/better-sqlite3) module, or even other modules exposing the same API, offering both a greedly cached variant or a non cached (default) one.
 
 ```js
@@ -93,6 +92,6 @@ all`SELECT * FROM pragma_table_info(${name})`;
 ```
 
 
-#### Is it safe or is this SQLInjection prone?
+### Is it safe or is this SQLInjection prone?
 
-Every interpolation results into a boud `?` parameter so that if these are not exactly the same amount of expected parameters the module will throw an error.
+Every interpolation results into a bound `?` parameter so that if these are not exactly the same amount of expected parameters the module will throw an error.

@@ -33,5 +33,13 @@
       "default": "./cjs/cached.js"
     },
     "./package.json": "./package.json"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebReflection/better-tags.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WebReflection/better-tags/issues"
+  },
+  "homepage": "https://github.com/WebReflection/better-tags#readme"
 }
