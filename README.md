@@ -1,5 +1,8 @@
 # better-tags
 
+[![build status](https://github.com/WebReflection/better-tags/actions/workflows/node.js.yml/badge.svg)](https://github.com/WebReflection/better-tags/actions) [![Coverage Status](https://coveralls.io/repos/github/WebReflection/better-tags/badge.svg?branch=main)](https://coveralls.io/github/WebReflection/better-tags?branch=main)
+
+
 A way to handle SQLite with template literal tags that works seamlessly with both [bun](https://bun.sh/) and Nodejs' [better-sqlite3](https://www.npmjs.com/package/better-sqlite3) module, or even other modules exposing the same API, offering both a greedly cached variant or a non cached (default) one.
 
 ```js
