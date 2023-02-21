@@ -18,5 +18,22 @@ const handler = {
 export const entries = objects => new Proxy(objects, handler);
 
 export const exec = (db, template, values) => {
-  db.exec(template.join('?'), ...values);
+  // better sqlite3
+  /* c8 ignore start */
+  if (db.constructor.SqliteError) {
+    const query = [template[0]];
+    for (let i = 1; i < template.length; i++) {
+      const type = typeof values[i - 1];
+      const value = String(values[i - 1]);
+      query.push(
+        type === 'string' ? `'${value.replace(/'/g, "''")}'` : value,
+        template[i]
+      );
+    }
+    db.exec(query.join(''));
+  }
+  /* c8 ignore end */
+  // bun
+  else
+    db.exec(template.join('?'), ...values);
 };
