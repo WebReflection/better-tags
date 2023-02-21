@@ -1,6 +1,6 @@
 {
   "name": "better-tags",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A way to handle SQLite with template literal tags that works seamlessly with both bun and better-sqlite3",
   "main": "./cjs/index.js",
   "scripts": {
